@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<style>
+  		@media (max-width: 767px) {
+            .custom-button,
+            .custom-h2,
+            .pagination {
+                margin: 5px;
+            }
+        }
+  		.custom-button {
+    background-color: #5A311B; /* Your desired color */
+    color: #ffffff;
+			width: 250px;
+			padding: 10px;
+			margin: 10px;
+	/* Text color, if needed */
+  }
+		.custom-button:hover {
+			background-color: #7B5A48;
+		}
+		.custom-h2 {
+            position:relative; /* Your custom styles for the h2 element */
+           left: 335px; /* Adjust the bottom margin */
+          }
+	
+		.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+		.custom-pagination {
+            justify-content: center; /* Center the pagination horizontally */
+            margin-top: 100px; /* Adjust the top margin as needed */
+        }
+
+        .custom-pagination .page-link {
+            color: #5A311B; /* Change the color of page links */
+        }
+
+        .custom-pagination .page-link:hover {
+            background-color: #7B5A48; /* Change the background color on hover */
+            color: #ffffff; /* Change the text color on hover */
+        }
+		.custom-footer {
+        background-color: #7B5A48; /* Replace with the color you want */
+    }
+		 .custom-navbar .form-control {
+        border: 2px solid #7B5A48; /* Replace with the border color you want */
+        border-radius: 5px; /* Adjust the border radius as needed */
+        color: #7B5A48; /* Text color */
+    }
+
+    .custom-navbar .btn-warning {
+        background-color: #7B5A48; /* Replace with the button color you want */
+        border-color: #7B5A48; /* Replace with the border color you want */
+        border-radius: 5px; /* Adjust the border radius as needed */
+        color: #fff; /* Text color */
+    }
+        }
+	</style>
+	</head>
+	<section style="background-color: #eee;"></section>
+	  <html>
+		  <body>
+			 <div class="superNav border-bottom py-2 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+          <select  class="me-3 border-0 bg-light">
+            <option value="en-us">EN-US</option>
+          </select>
+          <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3"><strong>info@somedomain.com</strong></span>
+          <span class="me-3"><i class="fa-solid fa-phone me-1 text-warning"></i> <strong>1-800-123-1234</strong></span>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+          <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted" href="#">Shipping</a></span>
+          <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted" href="#">Policy</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+    <div class="container">
+      <img src="images/miragelogo.png" alt="logo">
+      	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
+        <div class="input-group">
+          <span class="border-warning input-group-text bg-priamry text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="text" class="form-control border-warning" style="color:#7a7a7a">
+          <button class="btn btn-warning text-white">Search</button>
+        </div>
+      </div>
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="ms-auto d-none d-lg-block">
+          <div class="input-group">
+            <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" class="form-control border" style="color:#7a7a7a">
+            <button class="btn btn-warning text-white">Search</button>
+          </div>
+        </div>
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Jewelry</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+			  <div class="container">
+        <!-- ... other content ... -->
+        <h2 class="custom-h2">Women's Jackets</h2>
+        <!-- ... other content ... -->
+    </div>
+	
+<div class="container">
+	
+    <div class="row">
+		<div class="col-md-3">
+		<div class="dropdown">
+  <button type="button" class="btn custom-button dropdown-toggle" data-bs-toggle="dropdown">
+    Size
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+		<div class="dropdown">
+  <button type="button" class="btn custom-button dropdown-toggle" data-bs-toggle="dropdown">
+    Color
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+		<div class="dropdown">
+  <button type="button" class="btn custom-button dropdown-toggle" data-bs-toggle="dropdown">
+    Style
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+		<div class="dropdown">
+  <button type="button" class="btn custom-button dropdown-toggle" data-bs-toggle="dropdown">
+    Occasion
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+		<div class="dropdown">
+  <button type="button" class="btn custom-button dropdown-toggle" data-bs-toggle="dropdown">
+    Material
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+		<div class="dropdown">
+  <button type="button" class="btn custom-button dropdown-toggle" data-bs-toggle="dropdown">
+  Brand
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+			</div>
+                <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat1.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		        <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat2.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		        <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat3.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		</div>
+	<div class="row justify-content-end">
+                <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat4.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		        <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat5.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		        <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat6.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		</div>
+	 <div class="row justify-content-end">
+                <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat7.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater"/>
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		        <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat8.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater" />
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+            <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		        <div class="p-2 col-md-3">
+        <div class="card" style="border-radius: 15px;">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light d-flex justify-content-center"
+            data-mdb-ripple-color="light">
+            <img src="images/coat9.jpg"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid"
+              alt="sweater"/>
+            <a href="#!">
+              <div class="mask"></div>
+            </a>
+          </div>
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p><a href="#!" class="text-dark">Pleated Business Casual Sweater</a></p>
+                <p class="small text-muted">Jackets</p>
+              </div>
+              <div>
+                <div class="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+                </div>
+                <p class="small text-muted">Rated 5.0/5</p>
+              </div>
+            </div>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body pb-0">
+            <div class="d-flex justify-content-between">
+              <p><a href="#!" class="text-dark">$3,999</a></p>
+              <p class="text-dark">#### 8787</p>
+            </div>
+            <p class="small text-muted">VISA Platinum</p>
+          </div>
+          <hr class="my-0" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+              
+              <button type="button" class="btn custom-button">Add to Cart</button>
+            </div>
+			</div>
+		  </div>
+		  </div>
+		 </div>
+	</div>
+	<div class="container">
+        <nav aria-label="Page navigation">
+            <!-- Add the custom-pagination class to the pagination ul -->
+            <ul class="pagination custom-pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+			   <section id="footer" class="custom-footer">
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+          <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="icons/appDownload icon.png"></use></svg>
+            
+            </a>
+            <p class="text-muted">© 2022</p>
+          </div>
+      
+          <div class="col mb-3">
+      
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Get Help</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Help Center</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Track Order</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shipping Info</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Returns</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact us</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Company</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Stores</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Collaboration</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </section>
+			  
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
